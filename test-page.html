@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlighter Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .highlight-section {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .test-text {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Text Highlighter Extension Test Page</h1>
+    
+    <div class="instructions">
+        <h3>📋 Testing Instructions:</h3>
+        <ol>
+            <li>Make sure the Text Highlighter extension is installed and enabled</li>
+            <li>Select any text below to test the highlighting functionality</li>
+            <li>Click "Save" when the popup appears</li>
+            <li>Click the extension icon to view saved highlights</li>
+        </ol>
+    </div>
+
+    <div class="highlight-section">
+        <h2>📚 Sample Article Section</h2>
+        <div class="test-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <div class="highlight-section">
+        <h2>🔬 Scientific Text</h2>
+        <div class="test-text">
+            <p>The quantum theory of physics has revolutionized our understanding of the universe. At the subatomic level, particles exhibit both wave-like and particle-like properties, a phenomenon known as wave-particle duality. This fundamental principle challenges our classical intuition about the nature of reality.</p>
+            
+            <p>Heisenberg's uncertainty principle states that we cannot simultaneously know both the position and momentum of a particle with arbitrary precision. This is not a limitation of our measuring instruments, but rather a fundamental property of the universe itself.</p>
+        </div>
+    </div>
+
+    <div class="highlight-section">
+        <h2>💡 Programming Concepts</h2>
+        <div class="test-text">
+            <p>React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage application state efficiently. The virtual DOM concept enables React to optimize rendering performance by minimizing actual DOM manipulations.</p>
+            
+            <p>Chrome extensions are powerful tools that can enhance browser functionality. They use manifest files to define permissions and content scripts to interact with web pages. The extension API provides access to browser features like storage, tabs, and notifications.</p>
+        </div>
+    </div>
+
+    <div class="highlight-section">
+        <h2>🌍 Travel Description</h2>
+        <div class="test-text">
+            <p>Paris, the City of Light, is renowned for its art, fashion, gastronomy and culture. The city's 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.</p>
+            
+            <p>The Louvre Museum houses masterpieces like the "Mona Lisa" and the "Venus de Milo." The Arc de Triomphe stands at the western end of the Champs-Élysées, and the Basilique du Sacré-Cœur sits atop the hill of Montmartre.</p>
+        </div>
+    </div>
+
+    <div class="highlight-section">
+        <h2>🎵 Music Theory</h2>
+        <div class="test-text">
+            <p>Harmony in music refers to the combination of simultaneously sounded musical notes to produce chords and chord progressions. The study of harmony involves chords and their construction and chord progressions and the principles of connection that govern them.</p>
+            
+            <p>Melody is a linear succession of musical tones that the listener perceives as a single entity. While melody and harmony are closely related, melody is the horizontal aspect of music, while harmony is the vertical aspect.</p>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3>✅ Expected Behavior:</h3>
+        <ul>
+            <li>Text selection should show a "Save Highlight?" popup</li>
+            <li>Clicking "Save" should show a success message</li>
+            <li>Extension popup should display saved highlights</li>
+            <li>Highlights should include page title, text, and timestamp</li>
+        </ul>
+    </div>
+
+    <script>
+        // Add some interactivity to make the page more engaging
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.highlight-section');
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                section.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

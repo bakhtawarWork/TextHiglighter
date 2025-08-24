@@ -1,0 +1,118 @@
+/* Content script popup styles */
+
+#text-highlighter-popup {
+  position: fixed;
+  z-index: 10000;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-width: 200px;
+}
+
+.text-highlighter-popup-content {
+  padding: 12px;
+}
+
+.text-highlighter-popup-header {
+  margin-bottom: 12px;
+}
+
+.text-highlighter-popup-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.text-highlighter-popup-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.text-highlighter-btn {
+  flex: 1;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.text-highlighter-btn-save {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.text-highlighter-btn-save:hover {
+  background-color: #0284c7;
+}
+
+.text-highlighter-btn-cancel {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.text-highlighter-btn-cancel:hover {
+  background-color: #e5e7eb;
+}
+
+/* Success and error message styles */
+#text-highlighter-success,
+#text-highlighter-error {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+#text-highlighter-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+#text-highlighter-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Ensure popup is above other elements */
+#text-highlighter-popup * {
+  box-sizing: border-box;
+}
+
+/* Highlighted text styles */
+.text-highlighter-saved {
+  background-color: #ffff00 !important;
+  border-radius: 3px !important;
+  padding: 2px 4px !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.text-highlighter-saved:hover {
+  background-color: #ffeb3b !important;
+}

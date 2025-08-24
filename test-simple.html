@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Highlighter Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #007bff;
+        }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Simple Text Highlighter Test</h1>
+    
+    <div class="instructions">
+        <h3>📋 Test Steps:</h3>
+        <ol>
+            <li>Make sure the Text Highlighter extension is installed and enabled</li>
+            <li>Select any text below (try different lengths)</li>
+            <li>You should see ONE "Save Highlight?" popup</li>
+            <li>Click "Save" - you should see a green success message</li>
+            <li>The text should be highlighted with a yellow background</li>
+            <li>Click the extension icon to view saved highlights</li>
+        </ol>
+    </div>
+
+    <div class="test-text">
+        <h3>📚 Sample Text to Highlight</h3>
+        <p>This is a simple paragraph with some text that you can select and highlight. Try selecting different parts of this text to test the extension functionality.</p>
+        
+        <p>You can also try selecting longer pieces of text to see how the popup handles different selection sizes. The extension should work consistently regardless of the amount of text selected.</p>
+        
+        <p>If you see multiple popups or no success messages, there might be an issue with the extension that needs to be fixed.</p>
+    </div>
+
+    <div class="test-text">
+        <h3>🔬 Another Test Section</h3>
+        <p>This is another section where you can test text selection. Try selecting just a few words, then try selecting entire sentences to see how the extension behaves.</p>
+        
+        <p>The extension should show a popup asking "Save Highlight?" whenever you select text, and clicking save should highlight the text and show a success message.</p>
+    </div>
+
+    <div class="instructions">
+        <h3>✅ Expected Results:</h3>
+        <ul>
+            <li>✅ One popup per text selection</li>
+            <li>✅ Green success message after saving</li>
+            <li>✅ Text gets highlighted with yellow background</li>
+            <li>✅ Extension popup shows saved highlights</li>
+            <li>✅ No duplicate popups or errors</li>
+        </ul>
+    </div>
+
+    <script>
+        // Add some debugging
+        console.log('Test page loaded');
+        
+        // Listen for selection events
+        document.addEventListener('selectionchange', function() {
+            const selection = window.getSelection();
+            if (selection.toString().trim().length > 0) {
+                console.log('Text selected:', selection.toString().trim());
+            }
+        });
+    </script>
+</body>
+</html>
